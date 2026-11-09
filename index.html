@@ -1,0 +1,236 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Tudor Mutică · Portfolio</title>
+<meta name="description" content="Tudor Mutică builds AI apps people can use today. Projects, stack, awards and CV.">
+<link rel="canonical" href="https://portfolio.tudorm.ro/">
+<meta name="theme-color" content="#F7F7F4">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Tudor Mutică · Portfolio">
+<meta property="og:description" content="I build AI apps people can use today.">
+<meta property="og:url" content="https://portfolio.tudorm.ro/">
+<meta property="og:image" content="https://portfolio.tudorm.ro/img/helpmate-interview.jpg">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600&display=swap">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="top">
+  <div class="wrap top-row">
+    <a class="brand" href="#top">Tudor Mutică</a>
+    <nav aria-label="Sections">
+      <ul class="nav">
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#awards">Awards</a></li>
+        <li><a href="#background">Background</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+  <section class="hero" id="top" aria-labelledby="hero-title">
+    <div class="wrap hero-grid">
+      <div class="hero-copy">
+        <p class="kicker">Portfolio · Bucharest</p>
+        <h1 id="hero-title">Tudor Mutică</h1>
+        <p class="tagline">I build AI apps people can use today.</p>
+        <div class="intro">
+          <p>I'm in my second year of engineering at Politehnica University of Bucharest.</p>
+          <p>I build every part of my projects myself, from the database and the model calls to the interface.</p>
+          <p>Two of them run live on Azure right now. Try them below.</p>
+        </div>
+        <p class="status"><span class="dot" aria-hidden="true"></span>Open to junior roles and freelance projects.</p>
+        <ul class="actions">
+          <li><a class="btn btn-primary" href="mailto:contact@tudorm.ro">Email</a></li>
+          <li><a class="btn" href="https://github.com/TudorM-Dev">GitHub</a></li>
+          <li><a class="btn" href="https://www.linkedin.com/in/tudor-mutica">LinkedIn</a></li>
+          <li><a class="btn" href="cv/Tudor_Mutica_CV.pdf">CV (PDF)</a></li>
+        </ul>
+      </div>
+      <nav class="toc" aria-label="Projects">
+        <p class="toc-title">Projects</p>
+        <ol>
+          <li><a href="#helpmate"><span class="n">01</span>HelpMate<span class="tag">live</span></a></li>
+          <li><a href="#trackrecord"><span class="n">02</span>TrackRecord<span class="tag">live</span></a></li>
+          <li><a href="#lexcopilot"><span class="n">03</span>LexCopilot</a></li>
+          <li><a href="#smartifybot"><span class="n">04</span>SmartifyBot</a></li>
+          <li><a href="#bookingengine"><span class="n">05</span>BookingEngine</a></li>
+        </ol>
+      </nav>
+    </div>
+  </section>
+
+  <section class="section" id="projects" aria-labelledby="projects-title">
+    <div class="wrap">
+      <div class="sec-head"><h2 id="projects-title">Projects</h2></div>
+
+      <article class="proj" id="helpmate" aria-labelledby="helpmate-title">
+        <div class="proj-text">
+          <p class="meta"><span>01</span><span>2026</span></p>
+          <h3 id="helpmate-title">HelpMate</h3>
+          <p class="lead">An AI interviewer that asks technical questions and grades your answers.</p>
+          <ul class="points">
+            <li>You pick a role and a level and answer in your own words. You get a score out of ten and a note on what was missing.</li>
+            <li>Nobody can talk the AI into reading another user's data.</li>
+            <li>Its 3 tools never receive a user id. The server attaches it from the login token, so a prompt injection has nothing to hijack.</li>
+            <li>Claude runs it in production, and a free local model runs it offline through Ollama. The second provider took 100 lines and left the interview logic alone.</li>
+          </ul>
+          <ul class="stack" aria-label="Stack">
+            <li>.NET 10</li><li>ASP.NET Core</li><li>Blazor</li><li>EF Core</li><li>Anthropic API / Ollama</li><li>xUnit</li><li>Azure</li>
+          </ul>
+          <p class="links">
+            <a href="https://helpmate-interview-coach-g2bgbnaua5cyd5cb.germanywestcentral-01.azurewebsites.net">Live demo<span aria-hidden="true"> ↗</span></a>
+            <a href="https://github.com/TudorM-Dev/HelpMate.InterviewCoach">Code<span aria-hidden="true"> ↗</span></a>
+          </p>
+        </div>
+        <figure class="shot">
+          <img src="img/helpmate-interview.jpg" width="1280" height="720" alt="HelpMate during an interview: a Java question at internship level, question 1 of 5, with an answer box and a Submit answer button." fetchpriority="high">
+        </figure>
+      </article>
+
+      <article class="proj" id="trackrecord" aria-labelledby="trackrecord-title">
+        <div class="proj-text">
+          <p class="meta"><span>02</span><span>2026</span></p>
+          <h3 id="trackrecord-title">TrackRecord</h3>
+          <p class="lead">Album ratings that only your friends can see.</p>
+          <ul class="points">
+            <li>I wrote the login myself, so logging out kills the session on the spot. A JWT can't be revoked without a blocklist, and a blocklist is a session table in disguise.</li>
+            <li>Before a profile loads, the server works out how you're related to its owner. Strangers get 4 fields.</li>
+            <li>Album search runs on Deezer, re-ranked by my own scoring.</li>
+          </ul>
+          <ul class="stack" aria-label="Stack">
+            <li>Node.js 22</li><li>TypeScript</li><li>Express 5</li><li>Prisma</li><li>React 19</li><li>Azure</li>
+          </ul>
+          <p class="links">
+            <a href="https://trackrecord-dgggbvhmdyfcexdw.germanywestcentral-01.azurewebsites.net/">Live demo<span aria-hidden="true"> ↗</span></a>
+            <a href="https://github.com/TudorM-Dev/TrackRecord.MusicRatings">Code<span aria-hidden="true"> ↗</span></a>
+          </p>
+        </div>
+        <figure class="shot">
+          <img src="img/trackrecord-release.jpg" width="1009" height="917" loading="lazy" decoding="async" alt="TrackRecord album page: an average of 9.68 from 2 ratings, your own score of 9.35, and a track-by-track list of kept and skipped songs.">
+        </figure>
+      </article>
+
+      <article class="proj" id="lexcopilot" aria-labelledby="lexcopilot-title">
+        <div class="proj-text">
+          <p class="meta"><span>03</span><span>2026</span></p>
+          <h3 id="lexcopilot-title">LexCopilot</h3>
+          <p class="lead">A legal assistant that answers from your own PDFs, fully offline.</p>
+          <ul class="stack" aria-label="Stack">
+            <li>C#</li><li>.NET</li><li>WPF</li><li>Semantic Kernel</li><li>Ollama</li><li>PdfPig</li>
+          </ul>
+          <p class="links">
+            <a href="https://github.com/TudorM-Dev/LexCopilot">Code<span aria-hidden="true"> ↗</span></a>
+          </p>
+        </div>
+        <ul class="points points-wide">
+          <li>Every claim in an answer points to the article it came from. If the documents don't cover the question, it tells you so instead of making up a law.</li>
+          <li>Embeddings, search and the model all run on your machine: nomic-embed-text, cosine similarity I wrote by hand, Llama 3 through Ollama.</li>
+          <li>No document leaves the computer.</li>
+          <li>The README is upfront about the gaps. No hybrid search yet, no chunk overlap, and the vectors live in memory.</li>
+        </ul>
+      </article>
+
+      <article class="proj" id="smartifybot" aria-labelledby="smartifybot-title">
+        <div class="proj-text">
+          <p class="meta"><span>04</span><span>2023–2024</span></p>
+          <h3 id="smartifybot-title">SmartifyBot</h3>
+          <p class="lead">A 6-axis robot arm that finds plastic bottles with a camera and follows voice commands.</p>
+          <ul class="points">
+            <li>I built all of it alone. A Teensy 4.1 handles the inverse kinematics and an Arduino Mega drives the gripper.</li>
+            <li>The two boards talk over a serial protocol I designed. Vision runs on OpenCV with a YOLO detector, and a Python control panel sits on top.</li>
+            <li>The head comes off. Swap in a gripper, a 3D-printing head or a laser.</li>
+            <li>It won three national awards in 2024: 1st at InfoEducatie, 2nd at ONCS and 2nd at RoSEF.</li>
+          </ul>
+          <ul class="stack" aria-label="Stack">
+            <li>Python (OpenCV, YOLO, SpeechRecognition)</li><li>C++ (Arduino, Teensy)</li><li>Fusion 360</li><li>Unity</li>
+          </ul>
+          <p class="links">
+            <a href="https://github.com/TudorM-Dev/InfoEducatie2024_SmartifyBot_Repository">Code<span aria-hidden="true"> ↗</span></a>
+          </p>
+        </div>
+        <figure class="shot shot-tall">
+          <img src="img/smartifybot-arm.jpg" width="900" height="1200" loading="lazy" decoding="async" alt="The SmartifyBot arm on a workbench: machined aluminium joints, belt drives, a two-finger gripper and wiring to the control boards.">
+        </figure>
+      </article>
+
+      <article class="proj" id="bookingengine" aria-labelledby="bookingengine-title">
+        <div class="proj-text">
+          <p class="meta"><span>05</span><span>2026</span></p>
+          <h3 id="bookingengine-title">RecordingStudio.<wbr>BookingEngine</h3>
+          <p class="lead">Booking software for recording studios.</p>
+          <ul class="stack" aria-label="Stack">
+            <li>.NET 10</li><li>ASP.NET Core</li><li>EF Core</li><li>SignalR</li><li>Blazor</li><li>xUnit</li>
+          </ul>
+          <p class="links">
+            <a href="https://github.com/TudorM-Dev/RecordingStudio.BookingEngine">Code<span aria-hidden="true"> ↗</span></a>
+          </p>
+        </div>
+        <ul class="points points-wide">
+          <li>6 booking rules live in a core project that references nothing, so 8 unit tests check them without a database.</li>
+          <li>Make a booking and every open page shows it instantly, over SignalR.</li>
+        </ul>
+      </article>
+    </div>
+  </section>
+
+  <section class="section" id="awards" aria-labelledby="awards-title">
+    <div class="wrap">
+      <div class="sec-head"><h2 id="awards-title">Awards</h2></div>
+      <ul class="rows">
+        <li><span class="when">2023</span><span>Gold Medal, I-FEST² International Festival of Engineering, Science and Technology, Tunisia</span></li>
+        <li><span class="when">2024</span><span>1st place, InfoEducatie, national olympiad of digital innovation, with SmartifyBot</span></li>
+        <li><span class="when">2024</span><span>2nd place nationally at ONCS and at RoSEF, with SmartifyBot</span></li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="section" id="background" aria-labelledby="background-title">
+    <div class="wrap">
+      <div class="sec-head"><h2 id="background-title">Background</h2></div>
+      <ul class="rows">
+        <li><span class="when">2025–2029</span><span><strong>Politehnica University of Bucharest</strong> · B.Eng., Industrial Informatics (FIIR)</span></li>
+        <li><span class="when">2024–present</span><span><strong>Robotics instructor, Ferdinand I National College, Bacău.</strong> I coached the team that reached the FIRST LEGO League Open International Championship Greece 2026.</span></li>
+        <li><span class="when">2022–2023</span><span><strong>Team manager and software lead, SmartCluster Robotics (FIRST Tech Challenge).</strong> I owned the robot's Java code, and the team made the national finals.</span></li>
+        <li><span class="when">2021–2025</span><span><strong>Volunteer coordinator, Don Bosco Foundation, Bacău.</strong> Recruited and led volunteer teams for summer camps of 600+ children a year.</span></li>
+      </ul>
+
+      <div class="sec-head sec-head-sub"><h2 id="skills-title">Skills</h2></div>
+      <dl class="skills">
+        <div><dt>AI</dt><dd>Anthropic API (Claude), Ollama, local LLMs, tool calling, RAG, OpenCV, YOLO</dd></div>
+        <div><dt>Languages</dt><dd>C#, TypeScript, JavaScript, Python, Java, C++, SQL</dd></div>
+        <div><dt>Building</dt><dd>ASP.NET Core, Node.js, React, Blazor, EF Core, Prisma, REST APIs, Azure, Git</dd></div>
+        <div><dt>Spoken</dt><dd>Romanian (native), English (Cambridge C1, 2025), German and Russian (basic)</dd></div>
+      </dl>
+    </div>
+  </section>
+
+  <section class="section contact" id="contact" aria-labelledby="contact-title">
+    <div class="wrap">
+      <div class="sec-head"><h2 id="contact-title">Contact</h2></div>
+      <p class="contact-line">Email me at <a class="mail" href="mailto:contact@tudorm.ro">contact@tudorm.ro</a>. I live in Bucharest.</p>
+      <ul class="actions">
+        <li><a class="btn btn-primary" href="mailto:contact@tudorm.ro">Email</a></li>
+        <li><a class="btn" href="https://github.com/TudorM-Dev">GitHub</a></li>
+        <li><a class="btn" href="https://www.linkedin.com/in/tudor-mutica">LinkedIn</a></li>
+      </ul>
+    </div>
+  </section>
+</main>
+
+<footer class="foot">
+  <div class="wrap foot-row">
+    <span>© 2026 Tudor Mutică</span>
+    <span>portfolio.tudorm.ro</span>
+  </div>
+</footer>
+</body>
+</html>
