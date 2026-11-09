@@ -47,11 +47,10 @@
         <h1 id="hero-title">Tudor Mutică</h1>
         <p class="tagline">I build AI apps people can use today.</p>
         <div class="intro">
-          <p>I'm in my second year of engineering at Politehnica University of Bucharest.</p>
-          <p>I build every part of my projects myself, from the database and the model calls to the interface.</p>
+          <p>I handle every part of my projects myself, from the database and the model calls to the interface.</p>
           <p>Two of them run live on Azure right now. Try them below.</p>
         </div>
-        <p class="status"><span class="dot" aria-hidden="true"></span>Open to junior roles and freelance projects.</p>
+        <p class="status"><span class="dot" aria-hidden="true"></span>Taking on freelance projects.</p>
         <ul class="actions">
           <li><a class="btn btn-primary" href="mailto:contact@tudorm.ro">Email</a></li>
           <li><a class="btn" href="https://github.com/TudorM-Dev">GitHub</a></li>
@@ -62,9 +61,9 @@
       <nav class="toc" aria-label="Projects">
         <p class="toc-title">Projects</p>
         <ol>
-          <li><a href="#helpmate"><span class="n">01</span>HelpMate<span class="tag">live</span></a></li>
-          <li><a href="#trackrecord"><span class="n">02</span>TrackRecord<span class="tag">live</span></a></li>
-          <li><a href="#lexcopilot"><span class="n">03</span>LexCopilot</a></li>
+          <li><a href="#lexcopilot"><span class="n">01</span>LexCopilot</a></li>
+          <li><a href="#helpmate"><span class="n">02</span>HelpMate<span class="tag">live</span></a></li>
+          <li><a href="#trackrecord"><span class="n">03</span>TrackRecord<span class="tag">live</span></a></li>
           <li><a href="#smartifybot"><span class="n">04</span>SmartifyBot</a></li>
           <li><a href="#bookingengine"><span class="n">05</span>BookingEngine</a></li>
         </ol>
@@ -76,9 +75,29 @@
     <div class="wrap">
       <div class="sec-head"><h2 id="projects-title">Projects</h2></div>
 
-      <article class="proj" id="helpmate" aria-labelledby="helpmate-title">
+      <article class="proj" id="lexcopilot" aria-labelledby="lexcopilot-title">
         <div class="proj-text">
           <p class="meta"><span>01</span><span>2026</span></p>
+          <h3 id="lexcopilot-title">LexCopilot</h3>
+          <p class="lead">A legal assistant that answers from your own PDFs, fully offline.</p>
+          <ul class="stack" aria-label="Stack">
+            <li>C#</li><li>.NET</li><li>WPF</li><li>Semantic Kernel</li><li>Ollama</li><li>PdfPig</li>
+          </ul>
+          <p class="links">
+            <a href="https://github.com/TudorM-Dev/LexCopilot">Code<span aria-hidden="true"> ↗</span></a>
+          </p>
+        </div>
+        <ul class="points points-wide">
+          <li>Every claim in an answer points to the article it came from. If the documents don't cover the question, it tells you so instead of making up a law.</li>
+          <li>Embeddings, search and the model all run on your machine: nomic-embed-text, cosine similarity I wrote by hand, Llama 3 through Ollama.</li>
+          <li>No document leaves the computer.</li>
+          <li>The README is upfront about the gaps. No hybrid search yet, no chunk overlap, and the vectors live in memory.</li>
+        </ul>
+      </article>
+
+      <article class="proj" id="helpmate" aria-labelledby="helpmate-title">
+        <div class="proj-text">
+          <p class="meta"><span>02</span><span>2026</span></p>
           <h3 id="helpmate-title">HelpMate</h3>
           <p class="lead">An AI interviewer that asks technical questions and grades your answers.</p>
           <ul class="points">
@@ -102,7 +121,7 @@
 
       <article class="proj" id="trackrecord" aria-labelledby="trackrecord-title">
         <div class="proj-text">
-          <p class="meta"><span>02</span><span>2026</span></p>
+          <p class="meta"><span>03</span><span>2026</span></p>
           <h3 id="trackrecord-title">TrackRecord</h3>
           <p class="lead">Album ratings that only your friends can see.</p>
           <ul class="points">
@@ -121,26 +140,6 @@
         <figure class="shot">
           <img src="img/trackrecord-release.jpg" width="1009" height="917" loading="lazy" decoding="async" alt="TrackRecord album page: an average of 9.68 from 2 ratings, your own score of 9.35, and a track-by-track list of kept and skipped songs.">
         </figure>
-      </article>
-
-      <article class="proj" id="lexcopilot" aria-labelledby="lexcopilot-title">
-        <div class="proj-text">
-          <p class="meta"><span>03</span><span>2026</span></p>
-          <h3 id="lexcopilot-title">LexCopilot</h3>
-          <p class="lead">A legal assistant that answers from your own PDFs, fully offline.</p>
-          <ul class="stack" aria-label="Stack">
-            <li>C#</li><li>.NET</li><li>WPF</li><li>Semantic Kernel</li><li>Ollama</li><li>PdfPig</li>
-          </ul>
-          <p class="links">
-            <a href="https://github.com/TudorM-Dev/LexCopilot">Code<span aria-hidden="true"> ↗</span></a>
-          </p>
-        </div>
-        <ul class="points points-wide">
-          <li>Every claim in an answer points to the article it came from. If the documents don't cover the question, it tells you so instead of making up a law.</li>
-          <li>Embeddings, search and the model all run on your machine: nomic-embed-text, cosine similarity I wrote by hand, Llama 3 through Ollama.</li>
-          <li>No document leaves the computer.</li>
-          <li>The README is upfront about the gaps. No hybrid search yet, no chunk overlap, and the vectors live in memory.</li>
-        </ul>
       </article>
 
       <article class="proj" id="smartifybot" aria-labelledby="smartifybot-title">
